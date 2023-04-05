@@ -1,23 +1,21 @@
 import { Clock } from "@/components/clocks";
 import { Weather } from "@/components/weather";
-
-export default () => {
+import bonfire from "@/assets/dark-souls-bonfire.gif";
+import Image from "next/image";
+const App = () => {
   const currentDay = new Date().toDateString();
   return (
-    <main className="min-h-screen grid grid-cols-4 px-8  gap-4   justify-items-center">
-      <div className="text-7xl col-span-3 text-slate-200 mr-auto mt-auto">
+    <main className="grid min-h-screen grid-cols-4 justify-items-center  gap-4   px-8">
+      <div className="col-span-3 mr-auto mt-auto text-7xl text-slate-200">
         {currentDay}
       </div>
-      <Clock className="text-5xl col-span-3 text-slate-200 mr-auto mb-auto" />
+      <Clock className="col-span-3 mb-auto mr-auto text-5xl text-slate-200" />
 
-      <div className="mt-auto mb-8 mr-auto col-span-2 ">
-        <img
-          src="https://media.tenor.com/drxH1lO9cfEAAAAi/dark-souls-bonfire.gif"
-          width="150"
-          alt="Astro"
-        />
+      <div className="col-span-2 mb-8 mr-auto mt-auto ">
+        <Image src={bonfire} width="150" alt="Dark Souls Bonfire" />
       </div>
-      <Weather className="col-span-2 mt-auto ml-auto mb-16" />
+      <Weather className="col-span-2 mb-16 ml-auto mt-auto" />
     </main>
   );
 };
+export default App;

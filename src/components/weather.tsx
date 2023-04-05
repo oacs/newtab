@@ -2,6 +2,8 @@
 import { z } from "zod";
 import { useQuery } from "@tanstack/react-query";
 import { FC } from "react";
+import Image from "next/image";
+import arrow from "../assets/arrow.png";
 
 export const weatherSchema = z.object({
   latitude: z.number(),
@@ -78,8 +80,8 @@ export const Weather: FC<{ className: string }> = ({ className }) => {
         {status == "loading" ? "--" : data?.current_weather.windspeed}
         <span className="text-xs font-light">km/h</span>
       </div>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/7178/7178896.png "
+      <Image
+        src={arrow}
         width="20"
         className="invert"
         height="20"
@@ -89,7 +91,7 @@ export const Weather: FC<{ className: string }> = ({ className }) => {
               ? "0"
               : data?.current_weather.winddirection + "deg",
         }}
-        alt=""
+        alt="North Arrow"
         title=""
       />
     </div>
