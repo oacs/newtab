@@ -15,7 +15,7 @@ export const Clock: FC<{ className: string }> = ({ className }) => {
     };
   }, []);
   return (
-    <span className={className + " text-stone-300 text-4xl"}>
+    <span className={className + " text-4xl text-stone-300"}>
       {date?.toLocaleTimeString() || "- - :- - :- -  MM"}
     </span>
   );

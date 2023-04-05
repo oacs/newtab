@@ -62,12 +62,12 @@ export const Weather: FC<{ className: string }> = ({ className }) => {
   return (
     <div
       className={
-        "grid grid-cols-2 px-8 h-min rounded-md bg-stone-800 p-4 text-stone-300 justify-items-center " +
+        "grid h-min grid-cols-2 justify-items-center rounded-md bg-stone-800 p-4 px-8 text-stone-300 " +
         className
       }
     >
-      <div className="text-xs col-span-2 font-normal">Mississauga</div>
-      <div className="my-2 col-span-2 text-4xl font-bold">
+      <div className="col-span-2 text-xs font-normal">Mississauga</div>
+      <div className="col-span-2 my-2 text-4xl font-bold">
         {status == "loading" ? "--" : data?.current_weather.temperature}
         <span className="absolute">°</span>
       </div>
