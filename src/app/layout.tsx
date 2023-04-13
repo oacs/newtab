@@ -9,9 +9,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <QueryProvider>
-        <body className="min-h-screen bg-slate-900">{children}</body>
-      </QueryProvider>
+      <head>
+        <title>New tab</title>
+      </head>
+      <body className="min-h-screen bg-slate-900">
+        <QueryProvider>{children}</QueryProvider>
+      </body>
     </html>
   );
 }
