@@ -83,7 +83,6 @@ export const Weather: FC<{ className: string }> = ({ className }) => {
       <Image
         src={arrow}
         width="20"
-        className="invert"
         height="20"
         style={{
           rotate:
