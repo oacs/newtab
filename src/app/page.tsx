@@ -5,7 +5,7 @@ import Image from "next/image";
 const App = () => {
   const currentDay = new Date().toDateString();
   return (
-    <main className="grid h-full min-h-[500px] max-w-3xl grid-cols-4 justify-items-center  gap-4   px-8 m-auto">
+    <main className="m-auto grid h-full  min-h-[500px] max-w-3xl grid-cols-4 justify-items-center gap-4 px-8">
       <div className="col-span-4 mr-auto mt-auto text-7xl text-slate-200">
         {currentDay}
       </div>
