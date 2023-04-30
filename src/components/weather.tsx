@@ -3,7 +3,8 @@ import { z } from "zod";
 import { useQuery } from "@tanstack/react-query";
 import { FC } from "react";
 import Image from "next/image";
-import arrow from "../assets/arrow.png";
+import arrow from "../assets/arrow.svg";
+import ArrowUpIcon from "./arrow";
 
 export const weatherSchema = z.object({
   latitude: z.number(),
@@ -64,35 +65,29 @@ export const Weather: FC<{ className: string }> = ({ className }) => {
   return (
     <div
       className={
-        "grid h-min grid-cols-2 justify-items-center rounded-md bg-stone-800 p-4 px-8 text-stone-300 " +
+        "grid h-min grid-cols-2 justify-items-center rounded-md bg-tokyonight-900 p-4 px-8 text-stone-300 " +
         className
       }
     >
-      <div className="col-span-2 text-xs font-normal">Mississauga</div>
-      <div className="col-span-2 my-2 text-4xl font-bold">
+      <div className="col-span-2 text-xs font-normal text-tokyonight-800 opacity-80">
+        Mississauga
+      </div>
+      <div className="col-span-2 my-2 text-4xl font-bold text-tokyonight-800">
         {status == "loading" ? "--" : data?.current_weather.temperature}
         <span className="absolute">°</span>
       </div>
 
-      <div className="text-xs">W Speed:</div>
-      <div className="text-xs">W-Dir:</div>
-      <div className="text-md">
+      <div className="text-xs text-tokyonight-800 opacity-80">W Speed:</div>
+      <div className="text-xs text-tokyonight-800 opacity-80">W-Dir:</div>
+      <div className="text-md text-tokyonight-800">
         {status == "loading" ? "--" : data?.current_weather.windspeed}
-        <span className="text-xs font-light">km/h</span>
+        <span className="text-xs font-light text-tokyonight-800 opacity-80">
+          km/h
+        </span>
       </div>
-      <Image
-        src={arrow}
-        width="20"
-        height="20"
-        style={{
-          rotate:
-            status == "loading"
-              ? "0"
-              : data?.current_weather.winddirection + "deg",
-          filter: "invert(1) grayscale(100%) brightness(200%)",
-        }}
-        alt="North Arrow"
-        title=""
+      <ArrowUpIcon
+        fill="#AFD7FC"
+        rotate={data?.current_weather.winddirection}
       />
     </div>
   );
