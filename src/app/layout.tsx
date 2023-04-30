@@ -12,7 +12,7 @@ export default function RootLayout({
       <head>
         <title>New tab</title>
       </head>
-      <body className="min-h-screen bg-slate-900">
+      <body className="flex min-h-screen items-center justify-center bg-slate-900">
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
