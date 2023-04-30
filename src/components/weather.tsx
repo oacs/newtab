@@ -89,6 +89,7 @@ export const Weather: FC<{ className: string }> = ({ className }) => {
             status == "loading"
               ? "0"
               : data?.current_weather.winddirection + "deg",
+          filter: "invert(1) grayscale(100%) brightness(200%)",
         }}
         alt="North Arrow"
         title=""
