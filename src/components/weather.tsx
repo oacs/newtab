@@ -2,8 +2,6 @@
 import { z } from "zod";
 import { useQuery } from "@tanstack/react-query";
 import { FC } from "react";
-import Image from "next/image";
-import arrow from "../assets/arrow.svg";
 import ArrowUpIcon from "./arrow";
 
 export const weatherSchema = z.object({
@@ -72,9 +70,9 @@ export const Weather: FC<{ className: string }> = ({ className }) => {
       <div className="col-span-2 text-xs font-normal text-tokyonight-800 opacity-80">
         Mississauga
       </div>
-      <div className="col-span-2 my-2 text-4xl font-bold text-tokyonight-300">
+      <div className="col-span-2 my-2 text-4xl font-bold text-tokyonight-400">
         {status == "loading" ? "--" : data?.current_weather.temperature}
-        <span className="absolute">°</span>
+        <span className="absolute text-tokyonight-100">°</span>
       </div>
 
       <div className="text-xs text-tokyonight-800 opacity-80">W Speed:</div>
