@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Scientifica", "Arial", "sans-serif"],
+      },
       colors: {
         tokyonight: {
           100: "#c8d3f5",

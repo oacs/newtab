@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Scientifica";
+    src: url("/fonts/scientifica.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
