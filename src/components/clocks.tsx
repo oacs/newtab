@@ -28,9 +28,9 @@ export const Clock: FC<{ className: string }> = ({ className }) => {
       className={className + " flex items-end text-4xl text-tokyonight-800"}
     >
       <div className="font-bold">{hours}</div>
-      <div className="mr-1 font-medium text-tokyonight-400">:</div>
+      <div className="mr-1 font-medium text-tokyonight-300">:</div>
       <div className="font-bold">{minutes}</div>
-      <div className="ml-2 font-medium text-tokyonight-800"> {ampm}</div>
+      <div className="ml-2 font-medium text-tokyonight-400"> {ampm}</div>
     </span>
   );
 };

@@ -8,16 +8,14 @@ const App = () => {
   return (
     <main className="m-auto grid h-full  min-h-[500px] max-w-3xl grid-cols-10 justify-items-center gap-4 px-8">
       <div className="col-span-6 mr-auto mt-auto grid grid-cols-2 text-7xl ">
-        <div className="text-tokyonight-300">{currentDay.slice(0, 3)}</div>
-        <div className="text-tokyonight-200">{currentDay.slice(8, 10)}</div>
+        <div className="text-tokyonight-800">{currentDay.slice(0, 3)}</div>
+        <div className="text-tokyonight-400">{currentDay.slice(8, 10)}</div>
         <div className="text-tokyonight-800">{currentDay.slice(4, 7)}</div>
         <div className="text-tokyonight-400">{currentDay.slice(11)}</div>
       </div>
       <div className="col-span-4 row-span-4 h-full w-full">
         <BookmarkList bookmarks={defaultBookmarks} />
       </div>
-      <Clock className="col-span-6 mb-auto mr-auto text-5xl text-white" />
-
       <div className="col-span-3 mb-8 mr-auto mt-auto ">
         <Image src={bonfire} width="150" alt="Dark Souls Bonfire" />
       </div>
