@@ -14,8 +14,8 @@ const ArrowUpIcon = ({ fill, rotate }: ArrowUpIconProps) => {
         fill={fill}
         stroke={fill}
         strokeWidth={5}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="feather feather-arrow-up"
       >
         <line x1="12" y1="19" x2="12" y2="5"></line>

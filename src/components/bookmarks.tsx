@@ -64,7 +64,7 @@ export const defaultBookmarks = [
   {
     id: 11,
     name: "OpenAI Chat",
-    url: "https://beta.openai.com/docs/api-reference/introduction",
+    url: "https://chat.openai.com/",
     category: "Code",
   },
   {
@@ -72,6 +72,12 @@ export const defaultBookmarks = [
     name: "Bing Chat",
     url: "https://www.bing.com/",
     category: "Code",
+  },
+  {
+    id: 13,
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/",
+    category: "Social Media",
   },
 ];
 type Bookmark = {
