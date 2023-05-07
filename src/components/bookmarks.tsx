@@ -117,7 +117,7 @@ const BookmarkList: React.FC<BookmarkProps> = ({ bookmarks }) => {
                 <li key={bookmark.id}>
                   <span className="text-tokyonight-200">- </span>
                   <a href={bookmark.url} className="text-tokyonight-800">
-                    {bookmark.name}
+                    {" ... " + bookmark.name}
                   </a>
                 </li>
               ))}
