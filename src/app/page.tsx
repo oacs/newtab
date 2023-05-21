@@ -1,3 +1,4 @@
+"use client";
 import { Weather } from "@/components/weather";
 import bonfire from "@/assets/dark-souls-bonfire.gif";
 import Image from "next/image";
